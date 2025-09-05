@@ -1,0 +1,99 @@
+.categories {
+  margin: 40px auto;
+  max-width: 1400px;
+  margin-top: 120px;
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 217px; // default სიმაღლე
+    gap: 20px;
+
+    .category {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      span {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        z-index: 2;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        transition: background 0.3s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+        &::after {
+          background: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    /* პროპორციები */
+    .a {
+      grid-row: span 2;
+    }
+    .b {
+      grid-row: span 1;
+    }
+    .c {
+      grid-row: span 2;
+    }
+    .d {
+      grid-row: span 1;
+    }
+    .e {
+      grid-row: span 2;
+    }
+    .f {
+      grid-row: span 2;
+    }
+    .g {
+      grid-row: span 1;
+    }
+    .h {
+      grid-row: span 1;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .categories-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 200px;
+    }
+    .a,
+    .e {
+      grid-row: span 1;
+    } // tablet-ზე ყველა ერთნაირი
+  }
+
+  @media (max-width: 600px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 200px;
+    }
+  }
+}

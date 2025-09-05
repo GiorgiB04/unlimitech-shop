@@ -1,0 +1,271 @@
+/* ===== Topbar ===== */
+.topbar {
+  background: @color-primary;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 13px;
+
+  .col-md-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 60px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 30px 0;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  align-items: center;
+
+  .navbar-brand {
+    font-weight: bold;
+    color: #0070f3;
+    font-size: 20px;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+
+  .nav > li > a {
+    color: #333;
+    font-weight: 500;
+    padding: 20px 15px;
+
+    &:hover {
+      color: #0070f3;
+      background: transparent;
+    }
+  }
+
+  .nav > li.sale > a {
+    color: #c40837;
+    font-weight: bold;
+  }
+}
+
+/* ===== Icons ===== */
+.navbar.main-nav {
+  .navbar-right.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input {
+        height: 44px;
+        padding: 6px 35px 6px 12px;
+        border-radius: 20px;
+        border: 1px solid @color-gray-stroke;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    a img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid @color-gray-stroke;
+    background: @color-gray-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      border-color: @color-primary;
+      background: lighten(@color-primary, 45%);
+    }
+  }
+}
+
+/* ===== Mega Menu ===== */
+.has-mega {
+  position: relative;
+
+  .chev {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  &.is-open .chev {
+    transform: rotate(-135deg);
+  }
+}
+
+.mega-menu {
+  position: fixed; /* absolute → fixed */
+  top: 150px; /* header-ის ქვემოთ გამოჩნდეს */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 800;
+
+  .mega-inner {
+    display: grid;
+    grid-template-columns: 260px 1fr 420px;
+    gap: 22px;
+    padding: 20px;
+  }
+
+  .mega-left {
+    border-right: 1px solid #f0f0f0;
+    padding-right: 12px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.15s ease, color 0.15s ease;
+
+      &.active,
+      &:hover {
+        background: #0b62ff0f;
+        color: #0b62ff;
+      }
+    }
+
+    .show-all {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #777;
+      &:hover {
+        color: #0b62ff;
+      }
+    }
+  }
+
+  .mega-center {
+    min-height: 320px;
+
+    .mega-pane {
+      display: none;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 8px 28px;
+
+      &.is-active {
+        display: grid;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li a {
+        display: block;
+        padding: 6px 0;
+        color: #333;
+        text-decoration: none;
+        &:hover {
+          color: #0b62ff;
+        }
+      }
+    }
+  }
+
+  .mega-right {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}
+
+.has-mega.is-open > .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+body.no-scroll {
+  overflow: hidden;
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimitech Shop</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <!-- Slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Custom Font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- 🔵 Topbar -->
+    <header class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span
+              ><img src="img/phone-flip.png" alt="phone" /> (+48) 000 000
+              000</span
+            >
+            <span><img src="img/edit.png" alt="email" /> Napisz do nas!</span>
+            <span
+              ><img src="img/shipping-fast.png" alt="delivery" /> Darmowa
+              dostawa</span
+            >
+            <span
+              ><img src="img/restock.png" alt="return" /> 30 dni na darmowy
+              zwrot</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🔵 Navigation -->
+    <nav class="navbar main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img src="img/Logo.svg" alt="Unlimitech" />
+          </a>
+        </div>
+
+        <!-- Middle menu -->
+        <ul class="nav navbar-nav navbar-center">
+          <li class="nav-item has-mega" id="nav-women-item">
+            <a
+              href="/kategoria/damskie-buty-skorzane"
+              id="nav-women"
+              aria-expanded="false"
+            >
+              Damskie buty skórzane
+              <span class="chev"></span>
+            </a>
+
+            <!-- MEGA MENU -->
+            <div class="mega-menu" id="mega-women" aria-hidden="true">
+              <div class="mega-inner">
+                <!-- Left column: top categories -->
+                <aside class="mega-left">
+                  <ul class="submenu">
+                    <li data-pane="polbuty">
+                      <img
+                        src="img/buty_icons/polbuty_60_60px.png"
+                        alt="Półbuty"
+                      />
+                      <span>Półbuty</span>
+                    </li>
+                    <li data-pane="jazzowki">
+                      <img src="img/buty_icons/Warstwa_4.png" alt="Jazzówki" />
+                      <span>Jazzówki</span>
+                    </li>
+                    <li data-pane="czolenka">
+                      <img
+                        src="img/buty_icons/szpiki_60_60px.png"
+                        alt="Czółenka"
+                      />
+                      <span>Czółenka</span>
+                    </li>
+                    <li data-pane="baleriny">
+                      <img
+                        src="img/buty_icons/balerinki_60_60px 1.png"
+                        alt="Baleriny"
+                      />
+                      <span>Baleriny</span>
+                    </li>
+                    <li data-pane="sandaly">
+                      <img
+                        src="img/buty_icons/sandaly_60_60px.png"
+                        alt="Sandały"
+                      />
+                      <span>Sandały</span>
+                    </li>
+                    <li data-pane="klapki">
+                      <img
+                        src="img/buty_icons/klapki_60_60px 1.png"
+                        alt="Klapki"
+                      />
+                      <span>Klapki</span>
+                    </li>
+                    <li data-pane="botki">
+                      <img src="img/buty_icons/botki_60_60px.png" alt="Botki" />
+                      <span>Botki</span>
+                    </li>
+                    <li data-pane="kozaki">
+                      <img
+                        src="img/buty_icons/kozaki_60_60px.png"
+                        alt="Kozaki"
+                      />
+                      <span>Kozaki</span>
+                    </li>
+                    <li data-pane="outlet">
+                      <img
+                        src="img/buty_icons/outlet_60_60px.png"
+                        alt="Outlet"
+                      />
+                      <span>Outlet</span>
+                    </li>
+                  </ul>
+
+                  <a class="show-all" href="/kategoria/damskie-buty-skorzane"
+                    >Pokaż wszystkie</a
+                  >
+                </aside>
+
+                <!-- Center column: panes with subcategories (2 კოლონად) -->
+                <section class="mega-center" id="mega-center">
+                  <!-- Botki pane -->
+                  <div class="mega-pane is-active" data-pane="botki">
+                    <ul class="col">
+                      <li><a href="#">sztyblety</a></li>
+                      <li><a href="#">botki płaskie</a></li>
+                      <li><a href="#">botki na słupku</a></li>
+                      <li><a href="#">botki sznurowane</a></li>
+                      <li><a href="#">workery</a></li>
+                      <li><a href="#">botki dziurkowane</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">botki na obcasie</a></li>
+                      <li><a href="#">botki kowbojki</a></li>
+                      <li><a href="#">botki na szpilce</a></li>
+                      <li><a href="#">botki ocieplane</a></li>
+                      <li><a href="#">botki jesienne</a></li>
+                      <li><a href="#">botki zimowe</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- დანარჩენი პანელები (მაგალითები) -->
+                  <div class="mega-pane" data-pane="czolenka">
+                    <ul class="col">
+                      <li><a href="#">na obcasie</a></li>
+                      <li><a href="#">klasyczne</a></li>
+                      <li><a href="#">na słupku</a></li>
+                      <li><a href="#">z paskiem</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">na szpilce</a></li>
+                      <li><a href="#">peep toe</a></li>
+                      <li><a href="#">ślubne</a></li>
+                      <li><a href="#">wieczorowe</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-pane" data-pane="baleriny">
+                    <ul class="col">
+                      <li><a href="#">klasyczne</a></li>
+                      <li><a href="#">z noskiem</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">kokarda</a></li>
+                      <li><a href="#">skórzane</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-pane" data-pane="sandaly">
+                    <ul class="col">
+                      <li><a href="#">na szpilce</a></li>
+                      <li><a href="#">na koturnie</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">płaskie</a></li>
+                      <li><a href="#">sportowe</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-pane" data-pane="kozaki">
+                    <ul class="col">
+                      <li><a href="#">za kolano</a></li>
+                      <li><a href="#">klasyczne</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">na obcasie</a></li>
+                      <li><a href="#">ocieplane</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-pane" data-pane="outlet">
+                    <ul class="col">
+                      <li><a href="#">ostatnie sztuki</a></li>
+                      <li><a href="#">-50%</a></li>
+                    </ul>
+                    <ul class="col">
+                      <li><a href="#">mix modeli</a></li>
+                      <li><a href="#">sezonowe</a></li>
+                    </ul>
+                  </div>
+                </section>
+
+                <!-- Right column: preview image -->
+                <figure class="mega-right">
+                  <img src="img/product_media.png" alt="Kategoria – podgląd" />
+                </figure>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#">Bony podarunkowe</a></li>
+          <li><a href="#">Nowości</a></li>
+          <li><a href="#">Bestsellery</a></li>
+          <li class="sale"><a href="#">Wyprzedaż</a></li>
+        </ul>
+
+        <!-- Right side (search + icons) -->
+        <div class="navbar-right icons">
+          <form class="search-form">
+            <input type="text" placeholder="Wyszukaj" />
+            <button type="submit" class="icon-btn">
+              <img src="img/Search_light.png" alt="Szukaj" />
+            </button>
+          </form>
+          <a href="#" class="icon-btn"
+            ><img src="img/User_light.png" alt="Konto"
+          /></a>
+          <a href="#" class="icon-btn"
+            ><img src="img/Favorite_light.png" alt="Ulubione"
+          /></a>
+          <a href="#" class="icon-btn"
+            ><img src="img/Bag_alt_light.png" alt="Koszyk"
+          /></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🔵 Slider -->
+    <section class="slider">
+      <div class="slider-wrapper">
+        <div>
+          <img src="https://picsum.photos/1400/500?random=1" alt="Slide 1" />
+          <div class="slide-content">
+            <h1>Nowa kolekcja</h1>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab.
+            </p>
+            <a href="#" class="btn">Zobacz więcej</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://picsum.photos/1400/500?random=2" alt="Slide 2" />
+          <div class="slide-content">
+            <h1>Nowa kolekcja</h1>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </p>
+            <a href="#" class="btn">Zobacz więcej</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://picsum.photos/1400/500?random=3" alt="Slide 3" />
+          <div class="slide-content">
+            <h1>Nowa kolekcja</h1>
+            <p>
+              Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+            </p>
+            <a href="#" class="btn">Zobacz więcej</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔵 Categories -->
+    <section class="categories">
+      <div class="categories-grid">
+        <div class="category a">
+          <img src="https://picsum.photos/id/1011/600/800" alt="Baleriny" />
+        </div>
+        <div class="category b">
+          <img src="https://picsum.photos/id/1025/600/400" alt="Jazzówki" />
+        </div>
+        <div class="category c">
+          <img src="https://picsum.photos/id/103/600/400" alt="Czółenka" />
+        </div>
+        <div class="category d">
+          <img src="https://picsum.photos/id/1041/600/800" alt="Mokasyny" />
+        </div>
+        <div class="category e">
+          <img src="https://picsum.photos/id/1062/600/800" alt="Kozaki" />
+        </div>
+        <div class="category f">
+          <img src="https://picsum.photos/id/1074/600/400" alt="Sandały" />
+        </div>
+        <div class="category g">
+          <img src="https://picsum.photos/id/1080/600/400" alt="Botki" />
+        </div>
+        <div class="category h">
+          <img src="https://picsum.photos/id/1084/600/400" alt="Wyprzedaż" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔵 Produkty -->
+    <section class="products-tabs container">
+      <div class="products-header">
+        <ul class="tabs">
+          <li class="active"><a href="#">Promocje</a></li>
+          <li><a href="#">Nowości</a></li>
+          <li><a href="#">Bestsellery</a></li>
+        </ul>
+        <a href="#" class="see-all">Zobacz wszystkie</a>
+      </div>
+
+      <!-- Slick Slider -->
+      <div class="products-slider">
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label bestseller">BESTSELLER</span>
+            <span class="label new">NOWOŚĆ</span>
+            <img src="https://picsum.photos/id/1011/600/400" alt="Produkt 1" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Półbuty skóra naturalna – model 258</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="normal-price">350,10zł</span>
+            </div>
+            <p class="lowest-price">
+              Najniższa cena z 30 dni przed obniżką: 399,90zł
+            </p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label promo">PROMOCJA</span>
+            <img src="https://picsum.photos/id/1012/600/400" alt="Produkt 2" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Mokasyny na grubej podeszwie</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="new-price">350,10zł</span>
+              <span class="old-price">399,90zł</span>
+            </div>
+            <p class="lowest-price">
+              Najniższa cena z 30 dni przed obniżką: 399,90zł
+            </p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label bestseller">BESTSELLER</span>
+            <span class="label new">NOWOŚĆ</span>
+            <img src="https://picsum.photos/id/1013/600/400" alt="Produkt 3" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Półbuty damskie – model Classic</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="normal-price">350,10zł</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label promo">PROMOCJA</span>
+            <img src="https://picsum.photos/id/1012/600/400" alt="Produkt 4" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Mokasyny na grubej podeszwie</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="new-price">350,10zł</span>
+              <span class="old-price">399,90zł</span>
+            </div>
+            <p class="lowest-price">
+              Najniższa cena z 30 dni przed obniżką: 399,90zł
+            </p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label promo">PROMOCJA</span>
+            <img src="https://picsum.photos/id/1015/600/400" alt="Produkt 5" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Botki skórzane</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="new-price">380,00zł</span>
+              <span class="old-price">450,00zł</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <span class="label bestseller">BESTSELLER</span>
+            <img src="https://picsum.photos/id/1016/600/400" alt="Produkt 6" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Sandały letnie</h3>
+            <p class="availability">Zapata | Dostępny</p>
+            <div class="price">
+              <span class="new-price">220,00zł</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔵 Newsletter -->
+    <section class="newsletter container">
+      <div class="newsletter-content">
+        <div class="newsletter-illustration">
+          <img src="img/illustration.png" alt="Newsletter Illustration" />
+        </div>
+
+        <div class="newsletter-text">
+          <h2>Chcesz otrzymać 5% zniżki na swoje zakupy?</h2>
+          <p>
+            Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+            nowościach, promocjach i ofertach specjalnych!
+          </p>
+        </div>
+
+        <form class="newsletter-form">
+          <div class="input-wrapper">
+            <input type="email" placeholder="Twój adres email" required />
+            <button type="submit">
+              <img src="img/e-mail_arrow.png" alt="Submit" />
+            </button>
+          </div>
+          <label class="newsletter-accept">
+            <input type="checkbox" />
+            Akceptuję <a href="#">Regulamin</a> i
+            <a href="#">Politykę Prywatności</a>.
+          </label>
+        </form>
+      </div>
+    </section>
+
+    <!-- ⚪ Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>O nas</h4>
+          <ul>
+            <li><a href="#">Poznajmy się</a></li>
+            <li><a href="#">Skontaktuj się z nami</a></li>
+            <li><a href="#">Dołącz do nas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informacje</h4>
+          <ul>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka prywatności</a></li>
+            <li><a href="#">Zasady gwarancji</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Twoje konto</h4>
+          <ul>
+            <li><a href="#">Twoje konto</a></li>
+            <li><a href="#">Twoje zamówienia</a></li>
+            <li><a href="#">Logowanie</a></li>
+            <li><a href="#">Rejestracja</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Obsługa klienta</h4>
+          <ul>
+            <li><a href="#">Dostawa i płatność</a></li>
+            <li><a href="#">Wymiana</a></li>
+            <li><a href="#">Zwrot</a></li>
+            <li><a href="#">Reklamacje</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>Skontaktuj się z nami</h4>
+          <p>📞 (+48) 000 000 000</p>
+          <p>✉️ sklep@kontakt.com.pl</p>
+          <p>Jesteśmy do Twojej dyspozycji<br />pn-pt, 8:00 – 16:00</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-payments">
+          <h4>Dostawa i płatność</h4>
+          <div class="payment-icons">
+            <img src="img/payments/inpost.png" alt="InPost" />
+            <img src="img/payments/blik.png" alt="Blik" />
+            <img src="img/payments/przelewy24.png" alt="Przelewy24" />
+            <img src="img/payments/paypo.png" alt="ApplePay" />
+            <img src="img/payments/paypal.png" alt="PayPal" />
+          </div>
+        </div>
+
+        <div class="footer-socials">
+          <h4>Social media</h4>
+          <div class="social-icons">
+            <a href="#"><img src="img/social/facebook.png" alt="Facebook" /></a>
+            <a href="#"
+              ><img src="img/social/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"><img src="img/social/tik-tok.png" alt="TikTok" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

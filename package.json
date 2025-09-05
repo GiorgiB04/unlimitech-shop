@@ -1,0 +1,12 @@
+{
+  "name": "frontend-recruitment-task",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "lessc less/main.less css/main.css",
+    "watch:css": "chokidar \"less/**/*.less\" -c \"npm run build:css\""
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "chokidar-cli": "^3.0.0"
+  }
+}

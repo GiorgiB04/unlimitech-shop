@@ -1,0 +1,99 @@
+/* ============================
+   Responsive Styles
+   ============================ */
+
+@media (max-width: 768px) {
+  /* Header wrapper */
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Logo */
+  .header .logo {
+    display: inline-block;
+    max-width: 140px;
+  }
+
+  /* Header icons (account, heart, cart, burger) */
+  .header .header-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+
+    a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  /* Search bar */
+  .header .header-search {
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+
+    input {
+      flex: 1;
+      border-radius: 25px 0 0 25px;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      width: 50px;
+      border-radius: 0 25px 25px 0;
+      background: #f2f2f2;
+      border: 1px solid #ddd;
+      border-left: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* Hide desktop menu */
+  .header .main-menu {
+    display: none;
+  }
+
+  /* Products grid - 2 per row */
+  .products-slider .product-card {
+    margin: 0 auto 15px;
+    max-width: 48%;
+  }
+
+  /* Newsletter section responsive */
+  .newsletter {
+    flex-direction: column;
+    text-align: center;
+
+    .newsletter-content {
+      margin-bottom: 15px;
+    }
+
+    form {
+      width: 100%;
+
+      input {
+        width: calc(100% - 50px);
+      }
+    }
+  }
+
+  /* Footer sections stacked */
+  footer {
+    .footer-columns {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

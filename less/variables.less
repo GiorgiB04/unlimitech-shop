@@ -1,0 +1,55 @@
+// 🎨 Colors
+@color-primary: #0070f3; // Blue - Main (ფიგმიდან)
+@color-black: #000000; // Black
+@color-gray-stroke: #e3e3e3; // Gray - Stroke
+@color-gray-bg: #f6f6f6; // Gray - Background
+
+// 🅰️ Typography
+@font-family-base: "Inter", sans-serif;
+
+@h1-size: 40px;
+@h2-size: 32px;
+@h3-size: 24px;
+@h4-size: 20px;
+
+@line-height-h1: 62px;
+@line-height-base: 1.5;
+
+// Mixins
+.h1() {
+  font-size: @h1-size;
+  line-height: @line-height-h1;
+  font-weight: 700;
+  font-family: @font-family-base;
+}
+
+.h2() {
+  font-size: @h2-size;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: @font-family-base;
+}
+
+.h3() {
+  font-size: @h3-size;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: @font-family-base;
+}
+
+.h4() {
+  font-size: @h4-size;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: @font-family-base;
+}
+
+// 📱 Breakpoints (Bootstrap 3 reference)
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+.container {
+  width: 1400px; // figma width
+}

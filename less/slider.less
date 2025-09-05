@@ -1,0 +1,147 @@
+.slider {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .slick-slide {
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      z-index: 1;
+    }
+
+    .slide-content {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      color: #fff;
+      z-index: 2;
+
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0;
+        max-width: 600px;
+      }
+
+      .btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 30px 30px 0;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  // custom arrows
+  .slick-prev,
+  .slick-next {
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+  }
+
+  .slick-next {
+    right: 25px;
+  }
+
+  // custom slick dots
+  .slick-dots {
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 0 6px;
+
+      button {
+        width: 14px;
+        height: 14px;
+        border: none;
+        background: transparent;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: #333; // default შავი წერტილი
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+      }
+
+      &.slick-active button {
+        &::before {
+          width: 6px;
+          height: 6px;
+          background: #007bff; // ლურჯი შიდა წერტილი
+        }
+
+        // გარე ლურჯი წრე
+        &::after {
+          content: "";
+          width: 20px;
+          height: 20px;
+          border: 2px solid #007bff;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
