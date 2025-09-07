@@ -13,40 +13,45 @@ instrukcja uruchomienia projektu
 
 1.  Sklonuj repozytorium:
 
-    ``` bash
+    ```bash
     git clone https://github.com/GiorgiB04/unlimitech-shop.git
     cd unlimitech-shop
     ```
 
 2.  Zainstaluj zależności:
 
-    ``` bash
+    ```bash
     npm install
     ```
 
 3.  Zbuduj CSS z LESS:
 
-    ``` bash
+    ```bash
     npm run build:css
     ```
 
 4.  Uruchom tryb „watch" (automatyczna kompilacja LESS → CSS):
 
-    ``` bash
+    ```bash
     npm run watch:css
     ```
 
 5.  Otwórz `index.html` w przeglądarce.
+
+## 🌍 Deployment
+
+Projekt jest dostępny online pod adresem:  
+👉 [https://unlimitech-shop.vercel.app](https://unlimitech-shop.vercel.app)
 
 ## 📝 Struktura commitów (Conventional Commits)
 
 W projekcie używamy [Conventional
 Commits](https://www.conventionalcommits.org/):
 
--   `feat:` -- nowa funkcjonalność\
--   `fix:` -- poprawki błędów\
--   `style:` -- zmiany w stylach (CSS/LESS)\
--   `refactor:` -- zmiany w kodzie bez nowych funkcji
+- `feat:` -- nowa funkcjonalność\
+- `fix:` -- poprawki błędów\
+- `style:` -- zmiany w stylach (CSS/LESS)\
+- `refactor:` -- zmiany w kodzie bez nowych funkcji
 
 ### Przykłady commitów:
 
@@ -55,6 +60,6 @@ Commits](https://www.conventionalcommits.org/):
     style: update button hover state
     refactor: simplify jQuery logic
 
-------------------------------------------------------------------------
+---
 
 ✉️ Autor: **GiorgiB04**
