@@ -681,6 +681,7 @@ body.no-scroll {
   max-width: 1440px;
   margin: 40px auto 0;
   padding: 40px 60px;
+  margin-bottom: 30px;
 }
 .footer .footer-container {
   display: grid;
@@ -714,6 +715,13 @@ body.no-scroll {
 }
 .footer .footer-container .footer-contact p {
   margin-bottom: 6px;
+  line-height: 22px;
+}
+.footer .footer-container .footer-contact p img {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  margin-right: 8px;
 }
 .footer .footer-bottom {
   border-top: 1px solid #ddd;
@@ -744,6 +752,8 @@ body.no-scroll {
   border-radius: 10px;
   padding: 25px 30px;
   color: #fff;
+  max-width: 1440px;
+  margin: auto;
   /* 📱 Responsive */
 }
 .newsletter .newsletter-content {
@@ -800,11 +810,6 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
 }
-.newsletter .newsletter-content .newsletter-form .input-wrapper button img {
-  width: 16px;
-  height: 16px;
-  filter: invert(1);
-}
 .newsletter .newsletter-content .newsletter-form .newsletter-accept {
   margin-top: 6px;
   font-size: 12px;
@@ -841,87 +846,109 @@ body.no-scroll {
     margin: 0 auto;
   }
 }
-/* ============================
-   Responsive Styles
-   ============================ */
+@media (max-width: 992px) {
+  .categories .row {
+    margin: 0;
+  }
+  .categories .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .categories .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .categories .category {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .categories .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Newsletter responsive fix */
 @media (max-width: 768px) {
-  /* Header wrapper */
-  .header {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  /* Logo */
-  .header .logo {
-    display: inline-block;
-    max-width: 140px;
-  }
-  /* Header icons (account, heart, cart, burger) */
-  .header .header-icons {
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
-  }
-  .header .header-icons a {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-  }
-  /* Search bar */
-  .header .header-search {
-    margin-top: 12px;
-    display: flex;
+  .newsletter {
+    padding: 20px;
+    text-align: center;
     width: 100%;
   }
-  .header .header-search input {
-    flex: 1;
-    border-radius: 25px 0 0 25px;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-  .header .header-search .search-btn {
-    width: 50px;
-    border-radius: 0 25px 25px 0;
-    background: #f2f2f2;
-    border: 1px solid #ddd;
-    border-left: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* Hide desktop menu */
-  .header .main-menu {
-    display: none;
-  }
-  /* Products grid - 2 per row */
-  .products-slider .product-card {
-    margin: 0 auto 15px;
-    max-width: 48%;
-  }
-  /* Newsletter section responsive */
-  .newsletter {
+  .newsletter .content {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
-  .newsletter .newsletter-content {
+  .newsletter .text {
     margin-bottom: 15px;
+    max-width: 100%;
   }
   .newsletter form {
     width: 100%;
   }
-  .newsletter form input {
-    width: calc(100% - 50px);
+  .newsletter input {
+    width: 100%;
+    margin-bottom: 10px;
   }
-  /* Footer sections stacked */
-  footer .footer-columns {
+  .newsletter button {
+    width: 100%;
+  }
+}
+/* Footer responsive fix */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+  .footer .footer-container {
+    display: grid !important;
+    /* ვაიძულებთ grid-ს */
+    grid-template-columns: 1fr !important;
+    /* ერთი სვეტი მობაილზე */
+    gap: 20px;
+  }
+  footer .container {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 20px;
+  }
+  footer .column {
+    width: 100%;
+  }
+  footer .column ul {
+    padding: 0;
+  }
+}
+/* უსაფრთხოდ — რომ გვერდს ჰორიზონტალური სკროლი არ ჰქონდეს */
+.products-tabs {
+  overflow-x: clip;
+  /* ან hidden, თუ clip არაა ხელმისაწვდომი */
+}
+/* მხოლოდ მობილურზე ვხსნით კონტეინერის პადინგებს და ვაკომპენსირებთ სლაიდის პადინგს */
+@media (max-width: 768px) {
+  .products-tabs .container--slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* სლაიდების შიგნით მცირე ჰორიზონტალური პადინგი */
+  .products-slider .slick-slide {
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  /* slick-list-ს ვაძლევთ უარყოფით მარჯინს, რომ ზემოთ მოცემული პადინგები არ "გააფართოვოს" სექცია */
+  .products-slider .slick-list {
+    margin: 0 -12px;
+    overflow: visible;
+    /* რომ “peek” გამოჩნდეს */
+  }
+  /* ბარათს არ ვაძლევთ ფიქსირებულ სიგანეს — იღებს სლაიდის სიგანეს */
+  .products-slider .product-card {
+    width: 100%;
+    max-width: 360px;
+    /* სურვილისამებრ, ლამაზი ლიმიტი */
+    margin: 0 auto;
   }
 }
 body {
