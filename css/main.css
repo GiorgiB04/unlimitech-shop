@@ -920,6 +920,9 @@ body.no-scroll {
   footer .column ul {
     padding: 0;
   }
+  footer .social-icons {
+    display: flex;
+  }
 }
 /* უსაფრთხოდ — რომ გვერდს ჰორიზონტალური სკროლი არ ჰქონდეს */
 .products-tabs {
